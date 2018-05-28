@@ -29,8 +29,10 @@ def get_smallest_number(numbers):
 def is_even(number):
     return True if number % 2 == 0 else False
 
+
 def is_odd(number):
     return not is_even(number)
+
 
 def get_even_numbers(numbers):
     """Gets all even numbers from the list received.
@@ -59,6 +61,17 @@ def filter_even_numbers(numbers):
         i -= 1
     return None
 
+
+def string_from_2d(two_d_list):
+    result = ''
+    new_line = '\n'
+
+    for line in two_d_list:
+        result += ''.join(line) + new_line
+
+    return result.rstrip(new_line)
+
+
 def draw_solid_rectangle(x, y):
     """Generates a string with a solid rectangle made of * symbols with `x` columns and `y` rows.
 
@@ -66,7 +79,15 @@ def draw_solid_rectangle(x, y):
     :param y: Number of rows (height)
     :return: String containing corresponding solid rectangle
     """
-    pass  # <--- remove this `pass` and put your code here
+    result = []
+
+    for _ in range(y):
+        result.append([])
+
+        for _ in range(x):
+            result[-1].append('*')
+
+    return string_from_2d(result)
 
 
 def draw_rectangle_borders(x, y):
