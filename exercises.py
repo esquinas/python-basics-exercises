@@ -100,14 +100,19 @@ def draw_rectangle_borders(x, y):
     """
     SOLID = '*'
     EMPTY = ' '
+    x_boundaries = 0, x - 1
+    y_boundaries = 0, y - 1
 
     result = []
 
-    for _ in range(y):
+    for curr_y in range(y):
         result.append([])
 
-        for _ in range(x):
-            result[-1].append('*')
+        for curr_x in range(x):
+            if curr_y in y_boundaries or curr_x in x_boundaries:
+                result[-1].append(SOLID)
+            else:
+                result[-1].append(EMPTY)
 
     return string_from_2d(result)
 
