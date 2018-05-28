@@ -48,8 +48,12 @@ def filter_even_numbers(numbers):
     :param numbers: List containing corresponding numbers
     :return: Nothing
     """
-    pass  # <--- remove this `pass` and put your code here
-
+    i = len(numbers) - 1
+    while i >= 0:
+        if is_odd(numbers[i]):
+            numbers.pop(i)
+        i -= 1
+    return None
 
 def draw_solid_rectangle(x, y):
     """Generates a string with a solid rectangle made of * symbols with `x` columns and `y` rows.
