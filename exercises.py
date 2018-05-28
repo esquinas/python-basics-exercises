@@ -20,7 +20,10 @@ def get_smallest_number(numbers):
     :param numbers: List containing corresponding numbers
     :return: Smallest number found
     """
-    pass  # <--- remove this `pass` and put your code here
+    if len(numbers) == 1:
+        return numbers[0]
+    else:
+        return get_smallest_number([x for i, x in enumerate(numbers) if x < numbers[i - 1]])
 
 
 def is_even(number):
