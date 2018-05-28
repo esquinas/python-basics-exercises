@@ -6,10 +6,10 @@ def get_largest_number(numbers):
     :param numbers: List containing corresponding numbers
     :return: Largest number found
     """
-    if len(n) == 1:
-        return n[0]
+    if len(numbers) == 1:
+        return numbers[0]
     else:
-        return get_largest_number([x for i, x in enumerate(n) if x > n[i - 1]])
+        return get_largest_number([x for i, x in enumerate(numbers) if x > numbers[i - 1]])
 
 
 def get_smallest_number(numbers):
