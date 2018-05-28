@@ -23,6 +23,12 @@ def get_smallest_number(numbers):
     pass  # <--- remove this `pass` and put your code here
 
 
+def is_even(number):
+    return True if number % 2 == 0 else False
+
+def is_odd(number):
+    return not is_even(number)
+
 def get_even_numbers(numbers):
     """Gets all even numbers from the list received.
 
@@ -31,7 +37,7 @@ def get_even_numbers(numbers):
     :param numbers: - List containing corresponding numbers
     :return: New list containing all even numbers found
     """
-    pass  # <--- remove this `pass` and put your code here
+    return [x for x in numbers if is_even(x)]
 
 
 def filter_even_numbers(numbers):
