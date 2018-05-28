@@ -79,13 +79,14 @@ def draw_solid_rectangle(x, y):
     :param y: Number of rows (height)
     :return: String containing corresponding solid rectangle
     """
+    SOLID = '*'
     result = []
 
     for _ in range(y):
         result.append([])
 
         for _ in range(x):
-            result[-1].append('*')
+            result[-1].append(SOLID)
 
     return string_from_2d(result)
 
@@ -97,7 +98,18 @@ def draw_rectangle_borders(x, y):
     :param y: Number of rows (height)
     :return: String containing corresponding rectangle border
     """
-    pass  # <--- remove this `pass` and put your code here
+    SOLID = '*'
+    EMPTY = ' '
+
+    result = []
+
+    for _ in range(y):
+        result.append([])
+
+        for _ in range(x):
+            result[-1].append('*')
+
+    return string_from_2d(result)
 
 
 def draw_pyramid(height):
