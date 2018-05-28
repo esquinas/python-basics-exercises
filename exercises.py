@@ -52,6 +52,7 @@ def filter_even_numbers(numbers):
     :return: Nothing
     """
     i = len(numbers) - 1
+
     while i >= 0:
         if is_odd(numbers[i]):
             numbers.pop(i)
